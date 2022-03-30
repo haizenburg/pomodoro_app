@@ -11,6 +11,13 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
+const _btnTextStart = 'start pomodoro';
+// const _btnTextStart = 'resume pomodoro';
+// const _btnTextStart = 'resume break';
+// const _btnTextStart = 'take short break';
+// const _btnTextStart = 'take long break';
+// const _btnTextStart = 'take long break';
+
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
@@ -49,8 +56,10 @@ class _HomeState extends State<Home> {
                 SizedBox(
                   height: 10,
                 ),
-
-                Text('status description', style: TextStyle(color: Colors.white),)
+                Text(
+                  'status description',
+                  style: TextStyle(color: Colors.white),
+                ),
                 CustomButton(onTap: () {}, text: 'Start'),
                 CustomButton(onTap: () {}, text: 'Reset')
               ],
