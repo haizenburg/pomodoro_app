@@ -1,16 +1,13 @@
-# pomodoro_app
+# pomotracker
 
-A new Flutter project.
+Pomodoro tracker for people looking to keep track on their daily tasks
 
-## Getting Started
+the app uses a pomodoro timer technique, breaks work into intervals, typically 25 minutes in length, separated by short breaks.
 
-This project is a starting point for a Flutter application.
+https://en.wikipedia.org/wiki/Pomodoro_Technique
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#To-do
+[] - firebase backend
+[] - login/register screens
+[] - profile screen
+[] - run timer in backround
