@@ -7,7 +7,11 @@ the app uses a pomodoro timer technique, breaks work into intervals, typically 2
 https://en.wikipedia.org/wiki/Pomodoro_Technique
 
 #To-do
-[] - firebase backend\n
-[] - login/register screens
-[] - profile screen
-[] - run timer in backround
+
+- firebase backend\n
+
+- login/register screens
+
+- profile screen
+
+- run timer in backround
