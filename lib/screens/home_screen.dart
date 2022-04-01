@@ -1,5 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:pomodoro_app/model/pomodoro_status.dart';
+import 'package:pomodoro_app/utils/constants.dart';
 
 import '../widgets/progress_icons.dart';
 import '../widgets/custom_button.dart';
@@ -12,13 +16,23 @@ class Home extends StatefulWidget {
 }
 
 const _btnTextStart = 'start pomodoro';
-// const _btnTextStart = 'resume pomodoro';
-// const _btnTextStart = 'resume break';
-// const _btnTextStart = 'take short break';
-// const _btnTextStart = 'take long break';
-// const _btnTextStart = 'take long break';
+const _btnTextResume = 'resume pomodoro';
+const _btnTextResumeBreak = 'resume break';
+const _btnTextStartShortBreak = 'take short break';
+const _btnTextStartLongBreak = 'take long break';
+const _btnTextStartNewSet = 'start new set';
+const _btnTextPause = 'pause';
+const _btnTextReset = 'reset';
 
 class _HomeState extends State<Home> {
+  int remainingTime = pomodoroTotalTime;
+  String mainBtnText = _btnTextStart;
+  PomodoroStatus pomodoroStatus = PomodoroStatus.pausedPomodoro;
+
+  late Timer _timer;
+  int pomodoroNum = 0;
+  int setNum = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +43,7 @@ class _HomeState extends State<Home> {
           children: [
             SizedBox(height: 10),
             Text(
-              'Pomodoro number: 2',
+              'Pomodoro number: $pomodoroNum',
               style: TextStyle(fontSize: 32, color: Colors.white),
             ),
             Text(
